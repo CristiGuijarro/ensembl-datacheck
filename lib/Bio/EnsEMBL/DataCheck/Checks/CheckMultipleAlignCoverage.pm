@@ -46,7 +46,7 @@ sub tests {
     SELECT method_link_species_set_id 
       FROM method_link_species_set 
         JOIN method_link USING(method_link_id) 
-      WHERE method_link.type IN ('EPO', 'EPO_LOW_COVERAGE', 'PECAN')
+      WHERE method_link.type IN ('EPO_CORE', 'EPO_EXTENDED', 'PECAN')
     /;
   
   my $msa_mlss_array = $helper->execute_simple(-SQL => $msa_mlss_sql);
